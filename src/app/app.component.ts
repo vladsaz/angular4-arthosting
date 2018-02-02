@@ -9,26 +9,26 @@ import {GridListComponent} from './grid-list/grid-list.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  imageUrl = undefined;
-  videoUrl = undefined;
-  urlCreator = window.URL;
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
-  }
+  // title = 'app';
+  // imageUrl = undefined;
+  // videoUrl = undefined;
+  // urlCreator = window.URL;
+  // constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
+  // }
 
-  getData() {
-    this.http.get('http://localhost:5000/angular', { responseType: "blob" }).subscribe(data => {
-      // console.log(data);
-      this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(this.urlCreator.createObjectURL(data));
-      // console.log(this.imageUrl);
-    });
-  }
+  // getData() {
+  //   this.http.get('http://localhost:5000/angular', { responseType: "blob" }).subscribe(data => {
+  //     // console.log(data);
+  //     this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(this.urlCreator.createObjectURL(data));
+  //     // console.log(this.imageUrl);
+  //   });
+  // }
 
-  getDataVideo() {
-    this.http.get('http://localhost:5000/video', { responseType: "blob" }).subscribe(data => {
-      console.log(data);
-      this.videoUrl = this.sanitizer.bypassSecurityTrustUrl(this.urlCreator.createObjectURL(data));
-      // console.log(this.videoUrl);
-    });
-  }
+  // getDataVideo() {
+  //   this.http.get('http://localhost:5000/video', { responseType: "blob" }).subscribe(data => {
+  //     console.log(data);
+  //     this.videoUrl = this.sanitizer.bypassSecurityTrustUrl(this.urlCreator.createObjectURL(data));
+  //     // console.log(this.videoUrl);
+  //   });
+  // }
 }
