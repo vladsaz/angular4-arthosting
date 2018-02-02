@@ -16,17 +16,23 @@ export class MediaCardComponent implements OnInit {
   private imageDescription: string = undefined;
   private data: object = undefined;
   
+  
 
   constructor(private dataGetterService: DataGetterService) {
-    this.data = this.dataGetterService.getImageData();
+    // this.data = this.dataGetterService.getImageData();
+    // console.log(this.dataGetterService.getData());
+    // console.log("from component");
+    // console.log(this.data);
   }
 
   async getImages() {
-    // this.data = await this.dataGetterService.getImageData();
-    // console.log(this.data);
+    // let data1 = await this.dataGetterService.getImageData();
+    // console.log(data1);
     // return this.data;
   }
 
   ngOnInit() {
+    this.data = this.dataGetterService.objectData;
+    console.log(this.dataGetterService)
   }
 }

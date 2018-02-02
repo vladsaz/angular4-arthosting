@@ -5,15 +5,22 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 @Injectable()
 export class DataGetterService {
 
-  data: any = [];
+  public objectData: object = undefined;
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {
+    this.getImageData();
+    console.log(this.objectData)
+  }
 
   getImageData() {
     this.http.get('http://localhost:5000/dogs').subscribe(data => {
-
+      // console.log('from service');
+      // console.log(this);  
+      this.objectData = data;
     });
-    return this.data
+    // console.log("from service");
+    // console.log(this.objectData);
+    return this.objectData
   }
 
 }
