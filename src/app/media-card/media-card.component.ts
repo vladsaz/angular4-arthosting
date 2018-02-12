@@ -23,7 +23,7 @@ export class MediaCardComponent implements OnInit {
   ngOnInit() {
     this.dataGetterService.getImageData().then(data => {
         this.data = data;
-        console.log(this.data);
+        // console.log(this.data);
     });
   }
 }

@@ -1,9 +1,13 @@
 .example-card {
-    width: 400px;
+    width: 25vw;
+    margin: 0 auto;
   }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/61386-200.png');
     background-size: cover;
   }
   
+  .card-holder { 
+    margin-bottom: 20px;
+  }
