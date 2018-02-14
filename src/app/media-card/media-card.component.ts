@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
 import { DataGetterService } from '../data-getter.service';
 
 @Component({
@@ -16,14 +15,14 @@ export class MediaCardComponent implements OnInit {
   private imageURL: string = undefined;
   private imageDescription: string = undefined;
   private data: object = undefined;
-  
 
-  constructor(private dataGetterService: DataGetterService) {}
+
+  constructor(private dataGetterService: DataGetterService) { }
 
   ngOnInit() {
     this.dataGetterService.getImageData().then(data => {
-        this.data = data;
-        // console.log(this.data);
+      this.data = data;
+      // console.log(this.data);
     });
   }
 }

@@ -4,15 +4,44 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { GridListComponent } from './grid-list/grid-list.component';
 import { MediaCardComponent } from './media-card/media-card.component';
-import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+} from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
-import { Base64Component } from './base64/base64.component';
 import { DataGetterService } from './data-getter.service';
-import { Base64ConverterService } from './base64-converter.service';
 const appRoutes: Routes = [
-  { path: '', component: MediaCardComponent },
-  { path: 'base64', component: Base64Component }
+  { path: '', component: MediaCardComponent }
   // { path: 'hero/:id',      component: HeroDetailComponent },
   // {
   //   path: 'heroes',
@@ -30,8 +59,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     GridListComponent,
-    MediaCardComponent,
-    Base64Component
+    MediaCardComponent
   ],
   imports: [
     BrowserModule,
