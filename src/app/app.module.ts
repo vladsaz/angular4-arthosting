@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { GridListComponent } from './grid-list/grid-list.component';
 import { MediaCardComponent } from './media-card/media-card.component';
 import {
   MatAutocompleteModule,
@@ -58,7 +57,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    GridListComponent,
     MediaCardComponent
   ],
   imports: [
