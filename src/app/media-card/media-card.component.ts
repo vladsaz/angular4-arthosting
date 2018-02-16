@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { DataGetterService } from '../data-getter.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { DataGetterService } from '../data-getter.service';
   providers: [DataGetterService]
 })
 
-export class MediaCardComponent implements OnInit {
+export class MediaCardComponent implements OnInit, AfterViewInit {
 
   private imageTitle: string = undefined;
   private imageSubtitle: string = undefined;
@@ -23,6 +23,12 @@ export class MediaCardComponent implements OnInit {
     this.dataGetterService.getImageData().then(data => {
       this.data = data;
       // console.log(this.data);
+      
     });
+    console.log('on init')
+  }
+
+  ngAfterViewInit() {
+    
   }
 }

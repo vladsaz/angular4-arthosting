@@ -40,7 +40,7 @@ import {
 import { RouterModule, Routes } from '@angular/router';
 import { DataGetterService } from './data-getter.service';
 const appRoutes: Routes = [
-  { path: '', component: MediaCardComponent }
+  { path: 'card', component: MediaCardComponent }
   // { path: 'hero/:id',      component: HeroDetailComponent },
   // {
   //   path: 'heroes',
