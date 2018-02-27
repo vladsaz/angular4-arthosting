@@ -23,8 +23,8 @@ export class MediaCardComponent implements OnInit, AfterViewInit {
     this.dataGetterService.getImageData().then(data => {
       this.data = data;
       // console.log(this.data);
-      console.log('type');
-      console.log(this.data.media[0].mediaType == 'img');
+      // console.log('type');
+      // console.log(this.data.media[0].mediaType == 'img');
       
     });
 
