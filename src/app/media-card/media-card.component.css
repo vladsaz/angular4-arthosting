@@ -11,3 +11,7 @@
   .card-holder { 
     margin-bottom: 20px;
   }
+
+.example-card video, .example-card img {
+  width: 100%;
+}

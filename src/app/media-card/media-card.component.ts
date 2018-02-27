@@ -10,10 +10,10 @@ import { DataGetterService } from '../data-getter.service';
 
 export class MediaCardComponent implements OnInit, AfterViewInit {
 
-  private imageTitle: string = undefined;
-  private imageSubtitle: string = undefined;
-  private imageURL: string = undefined;
-  private imageDescription: string = undefined;
+  private mediaTitle: string = undefined;
+  private mediaSubtitle: string = undefined;
+  private mediaURL: string = undefined;
+  private mediaDescription: string = undefined;
   private data: object = undefined;
 
 
@@ -23,9 +23,11 @@ export class MediaCardComponent implements OnInit, AfterViewInit {
     this.dataGetterService.getImageData().then(data => {
       this.data = data;
       // console.log(this.data);
+      console.log('type');
+      console.log(this.data.media[0].mediaType == 'img');
       
     });
-    console.log('on init')
+
   }
 
   ngAfterViewInit() {
